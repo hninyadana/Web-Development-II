@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Application</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #blog-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .post {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 0 20px 15px;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .post-actions button {
+            margin-right: 10px;
+        }
+
+        /* 1 column on small screens */
+        @media (max-width: 700px) {
+            #blog-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Blog Post Application</h1>
+    <section>
+        <button id="add-post-btn">Add Blog Post</button>
+        <div id="blog-list">
+
+        </div>
+    </section>
+    <script src="blogpost.js"></script>
+</body>
+</html>
